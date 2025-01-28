@@ -64,10 +64,10 @@ LearnBridge
 ## GitHub Repositories
 
 ### Client Side:
-- **GitHub Repository Link**: [Client Side Repo](https://github.com/your-username/client-repo)
+- **GitHub Repository Link**: [Client Side Repo](https://github.com/Mustazir/SkillPathway-client.git)
 
 ### Server Side:
-- **GitHub Repository Link**: [Server Side Repo](https://github.com/your-username/server-repo)
+- **GitHub Repository Link**: [Server Side Repo](https://github.com/Mustazir/SkillPathway-server.git)
 
 ---
 
