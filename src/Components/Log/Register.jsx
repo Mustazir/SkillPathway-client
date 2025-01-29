@@ -55,7 +55,7 @@ const Register = () => {
         }
 
         formData.append('image', photoFile);
-        const response = await axios.post('https://api.imgbb.com/1/upload?key=7184d4d0cc210ac09f545d7688fa5876', formData, {
+        const response = await axios.post('https://api.imgbb.com/1/upload?key=32d886aa9e324d1a97049283e3514259', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -78,7 +78,7 @@ const Register = () => {
                                 title: `WelCome ${auth.currentUser.displayName} `
                             });
                             const user = { email, role }
-                            axios.post('https://learnbridge-red.vercel.app/users', user)
+                            axios.post('https://skillpath-bay.vercel.app/users', user)
                                 .then(res => console.log(res.data))
                                 .catch(error => { console.log(error) })
                             navg(location.state ? location.state : '/')
@@ -105,7 +105,7 @@ const Register = () => {
                 });
                 console.log(user2.user.email)
                 const user={email:user2.user.email,role:'Student'}
-                axios.post('https://learnbridge-red.vercel.app/users', user)
+                axios.post('https://skillpath-bay.vercel.app/users', user)
                     .then(res => console.log(res.data))
                     .catch(error => { console.log(error) })
 

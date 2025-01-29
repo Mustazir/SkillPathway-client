@@ -53,7 +53,7 @@ const CreateSession = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 formData.append('image', photoFile);
-                const response = await axios.post('https://api.imgbb.com/1/upload?key=7184d4d0cc210ac09f545d7688fa5876', formData, {
+                const response = await axios.post('https://api.imgbb.com/1/upload?key=32d886aa9e324d1a97049283e3514259', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },
@@ -62,7 +62,7 @@ const CreateSession = () => {
                 
                 const newSession = { ...session, photo: url }
                 
-                axios.post('https://learnbridge-red.vercel.app/sessions', newSession)
+                axios.post('https://skillpath-bay.vercel.app/sessions', newSession)
                     .then(res => {
 
                         if (res.data.acknowledged == true) {

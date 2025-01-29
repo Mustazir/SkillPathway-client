@@ -37,7 +37,7 @@ const AllUSer = () => {
         });
 
         if (confirmation && confirmation.toLowerCase() === 'confirm') {
-            axios.put(`https://learnbridge-red.vercel.app/admin_users/${id}`)
+            axios.put(`https://skillpath-bay.vercel.app/admin_users/${id}`)
                 .then(res => {
                     console.log(res.data)
                     if (res.data.acknowledged == true) {

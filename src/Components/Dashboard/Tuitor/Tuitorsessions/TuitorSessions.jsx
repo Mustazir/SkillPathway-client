@@ -10,7 +10,7 @@ const TuitorSessions = () => {
     const [reject,setreject]=useState([]);
     
     useEffect(()=>{
-        axios.get('https://learnbridge-red.vercel.app/rejected_reason')
+        axios.get('https://skillpath-bay.vercel.app/rejected_reason')
         .then(res=>{
             setreject(res.data)
         })
@@ -21,7 +21,7 @@ const TuitorSessions = () => {
         </div>
     }
     const handelrejected = async (id) => {
-        await axios.put(`https://learnbridge-red.vercel.app/session_approves_request/${id}`,)
+        await axios.put(`https://skillpath-bay.vercel.app/session_approves_request/${id}`,)
             .then(res => {
                 if (res.data.acknowledged == true) {
                     Swal.fire({

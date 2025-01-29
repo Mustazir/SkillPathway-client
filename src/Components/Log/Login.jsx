@@ -77,7 +77,7 @@ const Login = () => {
                     title: `WelCome ${user2.user.displayName} `
                 });
                 const user={email:user2.user.email,role:'Student'}
-                axios.post('https://learnbridge-red.vercel.app/users', user)
+                axios.post('https://skillpath-bay.vercel.app/users', user)
                     .then(res => console.log(res.data))
                     .catch(error => { console.log(error) })
 

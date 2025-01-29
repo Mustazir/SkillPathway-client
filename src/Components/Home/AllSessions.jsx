@@ -9,7 +9,7 @@ const AllSessions = () => {
     const { data: sessions = [], isLoading, isError } = useQuery({
         queryKey: ['approve-session'],
         queryFn: async () => {
-            const res = await axios.get('https://learnbridge-red.vercel.app/sessions/approve');
+            const res = await axios.get('https://skillpath-bay.vercel.app/sessions/approve');
             return res.data;
         },
     });

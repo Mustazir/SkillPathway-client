@@ -12,7 +12,7 @@ const StudentSession = () => {
     const { data: sessions = [], isLoading, refetch } = useQuery({
         queryKey: ['Ssessions'],
         queryFn: async () => {
-            const res = await axios.get(`https://learnbridge-red.vercel.app/student_session?StudentUser=${email}`);
+            const res = await axios.get(`https://skillpath-bay.vercel.app/student_session?StudentUser=${email}`);
             return res.data;
         }
     })
@@ -44,7 +44,7 @@ const StudentSession = () => {
         });
         if (review) {
             const data = { id, review }
-            axios.post(`https://learnbridge-red.vercel.app/addreview/tostudent`, data)
+            axios.post(`https://skillpath-bay.vercel.app/addreview/tostudent`, data)
                 .then(res => {
                     if (res.data.acknowledged == true) {
                         Swal.fire({

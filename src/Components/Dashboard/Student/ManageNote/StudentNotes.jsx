@@ -11,7 +11,7 @@ const StudentNotes = () => {
     const { data: notes = [], refetch } = useQuery({
         queryKey: ['notes'],
         queryFn: async () => {
-            const res = await axios.get(`https://learnbridge-red.vercel.app/students_notes?email=${email}`);
+            const res = await axios.get(`https://skillpath-bay.vercel.app/students_notes?email=${email}`);
             return res.data;
         }
     })
@@ -43,7 +43,7 @@ const StudentNotes = () => {
         });
         if (description) {
             const data = { id, description }
-            axios.put(`https://learnbridge-red.vercel.app/student_notes/${data.id}`, data)
+            axios.put(`https://skillpath-bay.vercel.app/student_notes/${data.id}`, data)
                 .then(res => {
                     if (res.data.acknowledged == true) {
                         Swal.fire({
@@ -73,7 +73,7 @@ const StudentNotes = () => {
             if (result.isConfirmed) {
 
 
-                axios.delete(`https://learnbridge-red.vercel.app/student_notes/${id}`)
+                axios.delete(`https://skillpath-bay.vercel.app/student_notes/${id}`)
                     .then(res => {
                         if (res.data.acknowledged == true) {
                             Swal.fire({

@@ -10,7 +10,7 @@ const StudentStudyMaterilas = () => {
     const { data: studentMaterials = [], isLoading, refetch } = useQuery({
         queryKey: ['Ssessions'],
         queryFn: async () => {
-            const res = await axios.get(`https://learnbridge-red.vercel.app/student_sessions/materials?StudentUser=${email}`);
+            const res = await axios.get(`https://skillpath-bay.vercel.app/student_sessions/materials?StudentUser=${email}`);
             return res.data;
         }
     })

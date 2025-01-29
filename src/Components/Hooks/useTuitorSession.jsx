@@ -7,7 +7,7 @@ const useTuitorSession = () => {
     const {data:sessions=[],isLoading,refetch }=useQuery({
         queryKey: ['tuitor-session'],
         queryFn: async () => {
-            const res=await axios.get('https://learnbridge-red.vercel.app/sessions');
+            const res=await axios.get('https://skillpath-bay.vercel.app/sessions');
             return res.data;
         }
     })

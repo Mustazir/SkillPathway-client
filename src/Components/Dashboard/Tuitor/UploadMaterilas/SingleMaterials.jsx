@@ -46,7 +46,7 @@ const SingleMaterials = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 formData.append('image', photoFile);
-                const response = await axios.post('https://api.imgbb.com/1/upload?key=7184d4d0cc210ac09f545d7688fa5876', formData, {
+                const response = await axios.post('https://api.imgbb.com/1/upload?key=32d886aa9e324d1a97049283e3514259', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },
@@ -55,7 +55,7 @@ const SingleMaterials = () => {
                 
                 const newMaterial = { ...material, photo: url }
                 
-                axios.post('https://learnbridge-red.vercel.app/materials', newMaterial)
+                axios.post('https://skillpath-bay.vercel.app/materials', newMaterial)
                     .then(res => {
                         console.log(res.data)
                         if (res.data.acknowledged == true) {

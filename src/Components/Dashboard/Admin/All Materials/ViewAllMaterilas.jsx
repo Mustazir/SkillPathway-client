@@ -26,7 +26,7 @@ const ViewAllMaterilas = () => {
             if (result.isConfirmed) {
 
                 
-                axios.delete(`https://learnbridge-red.vercel.app/materials/${id}`)
+                axios.delete(`https://skillpath-bay.vercel.app/materials/${id}`)
                     .then(res => {
                         if (res.data.acknowledged == true) {
                             Swal.fire({
