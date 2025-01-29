@@ -32,7 +32,7 @@ const SessionCard = () => {
 
     return (
         <div className='py-10'>
-            <h1 className='text-5xl font-bold text-center'>Our Session</h1>
+            <h1 className='text-5xl font-bold text-center p-10'>Our Session</h1>
             <div className="md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {sessions.slice(0, 6).map((session) => {
                     const isOngoing = new Date(session.enddate) >= today;

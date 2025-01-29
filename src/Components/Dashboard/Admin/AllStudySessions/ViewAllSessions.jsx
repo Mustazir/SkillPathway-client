@@ -181,8 +181,8 @@ const ViewAllSessions = () => {
         }
     }
     return (
-        <div className="p-6 bg-gray-200 space-y-4 w-full">
-            <div className="p-6 sm:p-12 bg-gray-50 text-gray-800">
+        <div className="p-6 bg-gray-900 space-y-4 w-full">
+            <div className="p-6 sm:p-12 bg-gray-50 text-black">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
                     <div className="flex flex-col">
@@ -192,7 +192,7 @@ const ViewAllSessions = () => {
                 </div>
 
             </div>
-            <div className="p-6 sm:p-12 bg-gray-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 sm:p-12 bg-blue-950 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {sessions.map((course) => (
                     <div
                         key={course._id}

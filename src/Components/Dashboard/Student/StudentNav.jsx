@@ -60,18 +60,18 @@ const StudentNav = () => {
             <div className="h-screen sticky top-0 bg-color3  hidden md:flex flex-col justify-between py-5 ">
                 <div className='flex flex-col px-3 items-center'>
                     <div className='flex md:gap-4 py-5 items-center'>
-                        <img src={logo} className='w-7 md:w-12 ' alt="" />
+                        <img src={logo} className='w-7 md:w-12 grayscale ' alt="" />
                         <h1 className="font-bold  text-xl md:text-3xl">LearnBridge</h1>
                     </div>
                     <div className="divider"></div>
-                    <ul className="menu  w-full  text-color1  p-0 [&_li>*]:rounded-none">
+                    <ul className="menu  w-full  text-white  p-0 [&_li>*]:rounded-none">
                         <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'student_booked_sessions'}>View booked session</Link></li>
                         <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'student_create_note'}>Create note</Link></li>
                         <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'student_personal_notes'}>Manage personal notes</Link></li>
                         <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'student_materials'}>study materials</Link></li>
                     </ul>
                     <div className="divider"></div>
-                    <ul className="menu  w-full  text-color1  p-0 [&_li>*]:rounded-none">
+                    <ul className="menu  w-full  text-white  p-0 [&_li>*]:rounded-none">
                     <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'/'}>Home</Link></li>
                         <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'https://docs.google.com/document/d/1bv6breYKF_AkR2YCMGSnHaMg6jr82bIF_TI5H9gbNpg/edit?tab=t.0'}>About Us</Link></li>
                         <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link to={'https://www.facebook.com/'}
@@ -80,7 +80,7 @@ const StudentNav = () => {
 
                     </ul>
                 </div>
-                <ul className="menu px-3  w-full  text-  p-0 [&_li>*]:rounded-none">
+                <ul className="menu px-3  w-full  text-white  p-0 [&_li>*]:rounded-none">
                     <li className='hover:bg-color1 hover:text-white active:bg-color1'><Link>Settings</Link></li>
                     <div className="divider"></div>
                     {

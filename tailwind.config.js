@@ -10,7 +10,7 @@ export default {
       colors:{
         'color1':"#262d53",
         'color2':"#4a7fce",
-        'color3':"#69c8d4",
+        'color3':"#172554",
       },
       fontFamily:{
         'lato':'"Lato", serif;',

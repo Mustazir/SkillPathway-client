@@ -67,7 +67,7 @@ const StudentCreate = () => {
         });
     };
     return (
-        <div className="p-6 bg-gray-200 space-y-4 w-full">
+        <div className="p-6 bg-gray-900 space-y-4 w-full">
             <div className="p-6 sm:p-12 bg-gray-50 text-gray-800">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
@@ -78,12 +78,12 @@ const StudentCreate = () => {
                 </div>
 
             </div>
-            <div className="p-6 sm:p-12 bg-gray-50 ">
+            <div className="p-6 sm:p-12 bg-blue-950 text-white">
                 <form onSubmit={handelSerssion} className="container flex flex-col mx-auto space-y-12 w-full">
-                    <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50">
+                    <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-400">
                         <div className="space-y-2 col-span-full lg:col-span-1">
                             <p className="font-medium text-xl font-Noto">Notes Information</p>
-                            <p className="text-xs text-gray-500 font-Noto">Student notes are comprehensive, well-structured materials designed to enhance understanding and support academic success. These notes serve as a clear roadmap, breaking down complex topics into digestible sections and summarizing key concepts for easier retention. </p>
+                            <p className="text-xs text-white font-Noto">Student notes are comprehensive, well-structured materials designed to enhance understanding and support academic success. These notes serve as a clear roadmap, breaking down complex topics into digestible sections and summarizing key concepts for easier retention. </p>
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                             <div className="col-span-full sm:col-span-3">
@@ -104,10 +104,10 @@ const StudentCreate = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50">
+                    <div className="grid grid-cols-4 gap-6 p-6 text-white rounded-md shadow-sm bg-gray-400">
                         <div className="space-y-2 col-span-full lg:col-span-1">
                             <p className="font-medium text-xl font-Noto">Personal Information</p>
-                            <p className="text-xs font-Noto text-gray-500">As a Student, this section showcases your personal information .</p>
+                            <p className="text-xs font-Noto ">As a Student, this section showcases your personal information .</p>
                         </div>
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                             <div className="col-span-full sm:col-span-3">
@@ -120,8 +120,8 @@ const StudentCreate = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="p-6 rounded-md shadow-sm bg-gray-50">
-                        <button type="submit" className="px-4 text-xl font-Noto py-2 w-full hover:bg-color1 hover:text-white rounded-md border-gray-800">
+                    <div className="p-6 rounded-md shadow-sm bg-gray-400">
+                        <button type="submit" className="border border-white px-4 text-xl font-Noto py-2 w-full hover:bg-color1 hover:text-white rounded-md border-gray-800 ">
                             Post
                         </button>
                     </div>
