@@ -10,7 +10,7 @@ const Footer = () => {
                         <div className="flex items-center justify-center w-12 h-12 rounded-full ">
                             <img src={img} alt="" />
                         </div>
-                        <span className="self-center text-2xl font-semibold">SkillPathWay</span>
+                        <span className="self-center text-2xl font-semibold">LearnBridge</span>
                     </a>
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

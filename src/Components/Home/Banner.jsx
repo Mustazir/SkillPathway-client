@@ -8,7 +8,7 @@ const Banner = () => {
                     <h1 className="text-5xl font-bold leading-none sm:text-6xl">Find The Best 
                         <span className="text-color2"> Course </span>To Grow Your Skills
                     </h1>
-                    <p className="mt-6 mb-8 text-lg sm:mb-12">SkillPathWay connects students, tutors, and administrators to streamline learning and resource sharing.
+                    <p className="mt-6 mb-8 text-lg sm:mb-12">LearnBridge connects students, tutors, and administrators to streamline learning and resource sharing.
                         <br className="hidden md:inline lg:hidden" /> Empowering education through collaboration and innovation.
                     </p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">

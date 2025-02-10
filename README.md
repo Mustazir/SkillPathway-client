@@ -198,8 +198,8 @@ Thanks to the **open-source community** and various **libraries & frameworks** u
 ---
 
 ## Front-end Live Site Link
-SkillPathWay
-[SkillPathWay](https://SkillPathWay-6f2b3.web.app/)
+LearnBridge
+[LearnBridge](https://learnbridge-6f2b3.web.app/)
 
 ---
 

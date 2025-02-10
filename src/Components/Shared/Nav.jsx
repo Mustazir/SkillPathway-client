@@ -41,11 +41,11 @@ const Nav = () => {
   // console.log(user)
   return (
 
-    <div className="navbar bg-base-100 px-7 mx-auto">
+    <div className="navbar bg-base-100 max-w-screen-2xl mx-auto">
       <div className="flex-1">
         <div className='flex md:gap-4  items-center'>
           <img src={logo} className='w-7 md:w-12 ' alt="" />
-          <h1 className="font-bold  text-xl md:text-3xl">SkillPathWay</h1>
+          <h1 className="font-bold  text-xl md:text-3xl">LearnBridge</h1>
         </div>
       </div>
       <div className="flex-none gap-2">
