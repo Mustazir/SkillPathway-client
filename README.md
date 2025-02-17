@@ -1,4 +1,6 @@
 # ![LearnBridge Banner](Screenshot_11.png)
+![RideFlow Banner](/Screenshot_14.png)
+# Collaborative Study Platform
 
 # LearnBridge - Collaborative Study Platform 📚💡
 
@@ -198,8 +200,8 @@ Thanks to the **open-source community** and various **libraries & frameworks** u
 ---
 
 ## Front-end Live Site Link
-LearnBridge
-[LearnBridge](https://learnbridge-6f2b3.web.app/)
+SkillPathWay
+[SkillPathWay](https://skillpathway-f76f5.web.app/)
 
 ---
 
