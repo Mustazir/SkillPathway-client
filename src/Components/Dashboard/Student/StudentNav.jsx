@@ -38,7 +38,7 @@ const StudentNav = () => {
     <div className="flex flex-col">
       <div className="z-20 relative flex justify-between w-full items-center py-2 px-2 md:hidden">
         <Link to={"/"}>
-          <h1 className="font-bold  text-xl md:text-3xl">LearnBridge</h1>
+          <h1 className="font-bold  text-xl md:text-3xl">SkillPathway</h1>
         </Link>
         <RxHamburgerMenu onClick={() => setShow(!show)} />
       </div>
@@ -66,7 +66,7 @@ const StudentNav = () => {
         <div className="flex flex-col px-3 items-center">
           <div className="flex md:gap-4 py-5 items-center">
             <img src={logo} className="w-7 md:w-12 grayscale " alt="" />
-            <h1 className="font-bold  text-xl md:text-3xl">LearnBridge</h1>
+            <h1 className="font-bold  text-xl md:text-3xl">SkillPathway</h1>
           </div>
           <div className="divider"></div>
           <ul className="menu  w-full  text-white  p-0 [&_li>*]:rounded-none">

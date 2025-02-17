@@ -1,10 +1,10 @@
-# ![LearnBridge Banner](Screenshot_11.png)
-![RideFlow Banner](/Screenshot_14.png)
+# ![SkillPathway Banner](Screenshot_11.png)
+
 # Collaborative Study Platform
 
-# LearnBridge - Collaborative Study Platform 📚💡
+# SkillPathway - Collaborative Study Platform 📚💡
 
-LearnBridge is an interactive and engaging platform that connects students, tutors, and administrators to streamline study session scheduling, resource sharing, and user management. It enhances collaboration, improves access to study materials, and ensures effective management of educational activities.
+SkillPathway is an interactive and engaging platform that connects students, tutors, and administrators to streamline study session scheduling, resource sharing, and user management. It enhances collaboration, improves access to study materials, and ensures effective management of educational activities.
 
 ## 🚀 Features
 
@@ -56,7 +56,7 @@ Admin Password: admin123
 ```
 
 ## 🌐 Live Demo
-[![LearnBridge Live](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://learnbridge-6f2b3.web.app/)
+[![SkillPathway Live](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://skillpathway-f76f5.web.app/)
 
 ## 📂 GitHub Repositories
 
@@ -113,7 +113,7 @@ Visit `http://localhost:3000` in your browser.
 
 ## 📌 Folder Structure
 ```
-LearnBridge/
+SkillPathway/
 ├── client/             # React Frontend
 │   ├── src/
 │   ├── components/
@@ -146,8 +146,8 @@ Thanks to the **open-source community** and various **libraries & frameworks** u
 ---
 
 🔗 **Stay Connected**  
-📧 Email: support@learnbridge.com  
-🌐 Website: [LearnBridge](https://learnbridge-6f2b3.web.app/)
+📧 Email: support@SkillPathway.com  
+🌐 Website: [SkillPathway](https://SkillPathway-6f2b3.web.app/)
 ## Website Features
 
 - **User Registration & Login**: 
