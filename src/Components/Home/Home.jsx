@@ -1,4 +1,7 @@
 
+import Announcements from '../ExtraSection/Announcements';
+import Reviews from '../ExtraSection/Review';
+import SuccessStories from '../ExtraSection/SuccessStories';
 import Banner from './Banner';
 
 import Others from './Others';
@@ -13,7 +16,10 @@ const Home = () => {
             <SecondSection></SecondSection>
             <SessionCard></SessionCard>
             <Others></Others>
+            <Announcements></Announcements>
+            <SuccessStories></SuccessStories>
             <OtherSecons></OtherSecons>
+            <Reviews></Reviews>
         </div>
     );
 };

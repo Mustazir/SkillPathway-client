@@ -31,7 +31,7 @@ const SessionCard = () => {
     }
 
     return (
-        <div className='py-10'>
+        <div className='py-10 dark:bg-gray-950 dark:text-white'>
             <h1 className='text-5xl font-bold text-center p-10'>Our Session</h1>
             <div className="md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {sessions.slice(0, 6).map((session) => {
@@ -40,7 +40,7 @@ const SessionCard = () => {
                     return (
                         <div
                             key={session._id}
-                            className="bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between"
+                            className="bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 flex flex-col justify-between"
                         >
                             <img
                                 src={session.photo}
@@ -51,7 +51,7 @@ const SessionCard = () => {
                                 <h3 className="text-xl font-semibold mb-2">
                                     {session.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">
+                                <p className="text-sm text-gray-600 ">
                                     {session.description?.slice(0, 100)}...
                                 </p>
                             </div>
@@ -59,13 +59,13 @@ const SessionCard = () => {
                             <div className="flex justify-between items-center mt-4">
                                 <button
                                     className={`px-4 py-2 text-sm rounded ${isOngoing
-                                        ? "bg-green-500 text-white"
-                                        : "bg-red-500 text-white"
+                                        ? "bg-green-500 text-white dark:bg-green-900"
+                                        : "bg-red-500 text-white dark:bg-red-900"
                                         }`}
                                 >
                                     {isOngoing ? "Ongoing" : "Closed"}
                                 </button>
-                                <Link to={`/session/${session._id}`} className="px-4 py-2 text-sm bg-blue-500 text-white rounded">
+                                <Link to={`/session/${session._id}`} className="px-4 py-2 text-sm bg-blue-500 dark:bg-blue-900 text-white rounded">
                                     Read More
                                 </Link>
                             </div>
@@ -76,7 +76,7 @@ const SessionCard = () => {
 
             </div>
             <div className='flex justify-center w-full mt-7'>
-                    <Link className='' to={'/allsessions'}><button className='px-6 py-2  text-lg bg-blue-500 text-white rounded'>View All</button></Link>
+                    <Link className='' to={'/allsessions'}><button className='px-6 py-2  text-lg bg-blue-500 dark:bg-blue-900 text-white rounded'>View All</button></Link>
                 </div>
         </div>
     );

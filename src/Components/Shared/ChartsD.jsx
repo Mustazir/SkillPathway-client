@@ -1,13 +1,36 @@
 import { useState } from 'react';
-import { BarChart, Bar, PieChart, Pie, LineChart, Line, Tooltip, Legend, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import {
+  BarChart, Bar, PieChart, Pie, LineChart, Line,
+  Tooltip, Legend, CartesianGrid, XAxis, YAxis, ResponsiveContainer
+} from 'recharts';
+
+import useAllUser from '../Hooks/useAllUser';
 
 export default function ChartsD() {
   const [darkMode, setDarkMode] = useState(false);
+  const { allUsers, isAllLoading } = useAllUser();
 
+  const [session,setsession]=useState([])
+  fetch('https://skillpath-bay.vercel.app/sessions')
+  .then(res => res.json())
+  .then(data => {
+    setsession(data)
+    
+  })
+  .catch(err => console.error(err));
+
+  if (isAllLoading) return <p>Loading...</p>;
+
+  // Separate users by roles
+  const students = allUsers.filter(user => user.role === 'Student');
+  const tutors = allUsers.filter(user => user.role === 'Tuitor');
+  const admins = allUsers.filter(user => user.role === 'Admin');
+
+  // Dynamic user statistics for the bar chart
   const userStats = [
-    { role: 'Students', count: 120 },
-    { role: 'Tutors', count: 35 },
-    { role: 'Admins', count: 5 },
+    { role: 'Students', count: students.length },
+    { role: 'Tutors', count: tutors.length },
+    { role: 'Admins', count: admins.length },
   ];
 
   const sessionStats = [
@@ -27,9 +50,9 @@ export default function ChartsD() {
     <div className={darkMode ? 'bg-[#0a2540] text-white' : 'bg-blue-100 text-black'}>
       <div className="min-h-screen p-8">
         <header className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold">Dashboard Overview</h1>
+          <h1 className="text-4xl font-bold">Dashboard Overview {session.length}</h1>
           <div className="flex items-center">
-            {/* Custom Dark Mode Toggle */}
+            {/* Dark Mode Toggle */}
             <label htmlFor="darkModeToggle" className="flex items-center cursor-pointer">
               <div className="relative">
                 <input
@@ -52,7 +75,7 @@ export default function ChartsD() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* User Stats - Bar Chart */}
+          {/* Dynamic User Stats - Bar Chart */}
           <div className="bg-white dark:bg-[#1a1a2e] rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-semibold mb-4">User Statistics</h2>
             <ResponsiveContainer width="100%" height={300}>
@@ -72,7 +95,16 @@ export default function ChartsD() {
             <h2 className="text-xl font-semibold mb-4">Session Status</h2>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
-                <Pie data={sessionStats} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#4a7fce" label />
+                <Pie
+                  data={sessionStats}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={100}
+                  fill="#4a7fce"
+                  label
+                />
                 <Tooltip />
               </PieChart>
             </ResponsiveContainer>
@@ -88,7 +120,12 @@ export default function ChartsD() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="bookings" stroke="#4a7fce" strokeWidth={2} />
+                <Line
+                  type="monotone"
+                  dataKey="bookings"
+                  stroke="#4a7fce"
+                  strokeWidth={2}
+                />
               </LineChart>
             </ResponsiveContainer>
           </div>

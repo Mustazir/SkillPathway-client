@@ -44,7 +44,7 @@ const AllMaterials = () => {
         });
     }
     return (
-        <div className="p-6 bg-gray-200 space-y-4 w-full">
+        <div className="p-6 bg-gray-200 space-y-4 w-full dark:bg-gray-900 dark:text-white">
             <div className="p-6 sm:p-12 bg-gray-50 text-gray-800">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
@@ -55,11 +55,11 @@ const AllMaterials = () => {
                 </div>
 
             </div>
-            <div className="p-6 sm:p-12 bg-gray-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 sm:p-12 bg-gray-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 dark:bg-gray-950 dark:text-white">
                 {materials.map((course) => (
                     <div
                         key={course._id}
-                        className="bg-white rounded-lg shadow-md overflow-hidden"
+                        className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-900 dark:text-white"
                     >
                         <img
                             src={course.photo}

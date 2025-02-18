@@ -48,6 +48,7 @@ const StudentCreate = () => {
                     },
                 });
                 const url = response.data.data.display_url;
+                console.log('Uploaded Image URL:', url);
                 
                 const newMaterial = { ...material, photo: url }
                 
@@ -100,7 +101,7 @@ const StudentCreate = () => {
                            
                             <div className="space-y-1 text-sm col-span-full sm:col-span-3">
                                 <label  className="block ">Provide a photo</label>
-                                <input type="file" name="photo" className="file-input file-input-[#2d3c44] file-input-bordered w-full max-w-xs" />
+                                <input type="file" name="photo" className="text-black file-input file-input-[#2d3c44] file-input-bordered w-full max-w-xs" />
                             </div>
                         </div>
                     </div>

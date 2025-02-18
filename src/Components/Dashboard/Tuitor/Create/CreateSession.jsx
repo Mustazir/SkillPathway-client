@@ -79,9 +79,9 @@ const CreateSession = () => {
     };
 
     return (
-        <section className="p-6 bg-gray-100 ">
+        <section className="p-6 bg-gray-100 dark:bg-gray-900 dark:text-white w-full">
             <form onSubmit={handelSerssion} className="container flex flex-col mx-auto space-y-12">
-                <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50">
+                <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50 dark:bg-gray-950 dark:text-white">
                     <div className="space-y-2 col-span-full lg:col-span-1">
                         <p className="font-medium text-xl font-Noto">Session Information</p>
                         <p className="text-xs text-gray-500 font-Noto">Plan and organize study sessions effortlessly. Set the agenda, date, and time to help students excel.</p>
@@ -117,19 +117,19 @@ const CreateSession = () => {
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label className="text-sm">Status</label>
-                            <input name="status" type="text" disabled defaultValue="Pending" className="w-full rounded-md text-gray-900 p-2 border-[1px]" />
+                            <input name="status" type="text" disabled defaultValue="Pending" className="w-full dark:text-white rounded-md text-gray-900 p-2 border-[1px]" />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label className="text-sm">Registration Fee</label>
-                            <input name="fee" type="text" defaultValue="0" disabled className="w-full rounded-md text-gray-900 p-2 border-[1px]" />
+                            <input name="fee" type="text" defaultValue="0" disabled className="w-full rounded-md dark:text-white text-gray-900 p-2 border-[1px]" />
                         </div>
                         <div className="space-y-1 text-sm col-span-full sm:col-span-3">
                             <label htmlFor="photo" className="block ">Provide a photo</label>
-                            <input type="file" name="photo" className="file-input file-input-[#2d3c44] file-input-bordered w-full max-w-xs" />
+                            <input type="file" name="photo" className="file-input file-input-[#2d3c44] dark:text-black file-input-bordered w-full max-w-xs" />
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50">
+                <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-50 dark:bg-gray-950 dark:text-white">
                     <div className="space-y-2 col-span-full lg:col-span-1">
                         <p className="font-medium text-xl font-Noto">Personal Information</p>
                         <p className="text-xs font-Noto text-gray-500">As a tutor, this section showcases your personal information to help students know you better.</p>
@@ -145,8 +145,8 @@ const CreateSession = () => {
                         </div>
                     </div>
                 </div>
-                <div className="p-6 rounded-md shadow-sm bg-gray-50">
-                    <button type="submit" className="px-4 text-xl font-Noto py-2 w-full hover:bg-color1 hover:text-white rounded-md border-gray-800">
+                <div className="p-6 rounded-md shadow-sm bg-gray-50 dark:bg-gray-950 dark:text-white ">
+                    <button type="submit" className="px-4 text-xl font-Noto py-2 w-full   hover:bg-color1 hover:text-white rounded-md border-gray-800">
                         Post this
                     </button>
                 </div>

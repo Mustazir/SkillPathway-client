@@ -36,13 +36,39 @@ const TuitorNav = () => {
   };
   return (
     <div className="flex flex-col">
-      <div className="z-20 relative flex justify-between w-full items-center py-2 px-2 md:hidden">
+      <div className="z-20 relative flex justify-between w-full items-center py-2 px-2 md:hidden dark:bg-gray-950 dark:text-white">
         <h1 className="font-bold  text-xl md:text-3xl">SkillPathway</h1>
         <RxHamburgerMenu onClick={() => setShow(!show)} />
       </div>
 
       {show && (
         <div className={`bg-color2 z-10 md:hidden relative `}>
+          <ul className="menu  w-full  text-white  p-0 [&_li>*]:rounded-none">
+            <li className="hover:bg-color1 hover:text-white active:bg-color1">
+              <Link to={"create_session"}>Create study session</Link>
+            </li>
+            <li className="hover:bg-color1 hover:text-white active:bg-color1 ">
+              <Link to={"tuitor_sessions"}>My sessions </Link>
+            </li>
+            <li className="hover:bg-color1 hover:text-white active:bg-color1">
+              <Link to={"tuitor_materials"}>Upload materials </Link>
+            </li>
+            <li className="hover:bg-color1 hover:text-white active:bg-color1">
+              <Link to={"all_materials"}>View all materials</Link>
+            </li>
+          </ul>
+        </div>
+      )}
+
+      <div className="h-screen sticky top-0 bg-color3 dark:bg-gray-950 dark:text-white  flex flex-col justify-between py-5 ">
+        <div className="flex flex-col px-3 items-center">
+          <Link to={'/'}>
+            <div className="flex md:gap-4 py-5 items-center">
+              <img src={logo} className="w-7 md:w-12 " alt="" />
+              <h1 className="font-bold text-white text-xl md:text-3xl">SkillPathway</h1>
+            </div>
+          </Link>
+          <div className="divider"></div>
           <ul className="menu  w-full  text-white  p-0 [&_li>*]:rounded-none">
             <li className="hover:bg-color1 hover:text-white active:bg-color1">
               <Link to={"create_session"}>Create study session</Link>
@@ -57,34 +83,8 @@ const TuitorNav = () => {
               <Link to={"all_materials"}>View all materials</Link>
             </li>
           </ul>
-        </div>
-      )}
-
-      <div className="h-screen sticky top-0 bg-color3  flex flex-col justify-between py-5 ">
-        <div className="flex flex-col px-3 items-center">
-          <link to={'/'}>
-            <div className="flex md:gap-4 py-5 items-center">
-              <img src={logo} className="w-7 md:w-12 " alt="" />
-              <h1 className="font-bold  text-xl md:text-3xl">SkillPathway</h1>
-            </div>
-          </link>
           <div className="divider"></div>
-          <ul className="menu  w-full  text-color1  p-0 [&_li>*]:rounded-none">
-            <li className="hover:bg-color1 hover:text-white active:bg-color1">
-              <Link to={"create_session"}>Create study session</Link>
-            </li>
-            <li className="hover:bg-color1 hover:text-white active:bg-color1">
-              <Link to={"tuitor_sessions"}>My sessions </Link>
-            </li>
-            <li className="hover:bg-color1 hover:text-white active:bg-color1">
-              <Link to={"tuitor_materials"}>Upload materials </Link>
-            </li>
-            <li className="hover:bg-color1 hover:text-white active:bg-color1">
-              <Link to={"all_materials"}>View all materials</Link>
-            </li>
-          </ul>
-          <div className="divider"></div>
-          <ul className="menu  w-full  text-color1  p-0 [&_li>*]:rounded-none">
+          <ul className="menu  w-full  text-white  p-0 [&_li>*]:rounded-none">
             <li className="hover:bg-color1 hover:text-white active:bg-color1">
               <Link to={"/"}>Home</Link>
             </li>
@@ -105,7 +105,7 @@ const TuitorNav = () => {
             </li>
           </ul>
         </div>
-        <ul className="menu px-3  w-full  text-color1  p-0 [&_li>*]:rounded-none">
+        <ul className="menu px-3  w-full  text-white  p-0 [&_li>*]:rounded-none">
           <li className="hover:bg-color1 hover:text-white active:bg-color1">
             <Link>Settings</Link>
           </li>
@@ -115,7 +115,7 @@ const TuitorNav = () => {
               <span className="loading loading-bars loading-md"></span>
             </div>
           ) : (
-            <div className="flex items-center w-[247px] gap-4 px-2">
+            <div className="text-white flex items-center w-[247px] gap-4 px-2">
               <div className="w-12  rounded-full">
                 <img
                   className="w-full rounded-full"
@@ -132,7 +132,7 @@ const TuitorNav = () => {
           <div className="divider"></div>
           <li
             onClick={handelLogout}
-            className="hover:bg-color1 hover:text-white active:bg-color1"
+            className="hover:bg-color1 text-white hover:text-white active:bg-color1"
           >
             <Link>Log Out</Link>
           </li>

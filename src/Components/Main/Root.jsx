@@ -8,8 +8,10 @@ const Root = () => {
     return (
         <div className='font-lato'>
             <Nav></Nav>
+            <div className='pt-20'>
             <Outlet></Outlet>
-            <ChartsD></ChartsD>
+            
+            </div>
             <Footer></Footer>
         </div>
     );

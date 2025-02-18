@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 const AllSessions = () => {
     const today = new Date();
+    const [sortOption, setSortOption] = useState('date'); // Default sorting by date
 
     const { data: sessions = [], isLoading, isError } = useQuery({
         queryKey: ['approve-session'],
@@ -13,6 +15,10 @@ const AllSessions = () => {
             return res.data;
         },
     });
+    const handleSortChange = (option) => {
+        setSortOption(option);
+    };
+
 
     if (isLoading) {
         return (
@@ -29,10 +35,40 @@ const AllSessions = () => {
             </div>
         );
     }
+
+    // Sort sessions based on selected option
+    const sortedSessions = [...sessions].sort((a, b) => {
+        switch (sortOption) {
+            case 'price':
+                return parseFloat(a.fee) - parseFloat(b.fee); // Ascending price
+            case 'recent':
+                return new Date(b.startdate) - new Date(a.startdate); // Recent first
+            case 'date':
+            default:
+                return new Date(b.startdate) - new Date(a.startdate); // Default sorting by date (recent first)
+        }
+    });
+
     console.log(sessions)
-    return (
-        <div className="md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {sessions.map((session) => {
+        return (
+        <div>
+            <div className="flex justify-end mb-4">
+                <button
+                    onClick={() => handleSortChange('price')}
+                    className="px-4 py-2 text-sm bg-gray-500 text-white rounded mr-2"
+                >
+                    Sort by Price
+                </button>
+                <button
+                    onClick={() => handleSortChange('recent')}
+                    className="px-4 py-2 text-sm bg-gray-500 text-white rounded"
+                >
+                    Sort by Recent
+                </button>
+            </div>
+
+            <div className="md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {sortedSessions.map((session) => {
                     const isOngoing = new Date(session.enddate) >= today;
 
                     return (
@@ -70,9 +106,8 @@ const AllSessions = () => {
                         </div>
                     );
                 })}
-                
-
             </div>
+        </div>
     );
 };
 
