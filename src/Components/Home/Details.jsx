@@ -54,8 +54,8 @@ const Details = () => {
     console.log(user)
     const isOngoing = new Date(session.enddate) >= new Date();
     return (
-        <div className="p-6 bg-gray-200 space-y-4">
-            <div className="p-6 sm:p-12 bg-gray-50 text-gray-800">
+        <div className="p-6 bg-gray-200 space-y-4 dark:bg-gray-950">
+            <div className="p-6 sm:p-12 bg-gray-50 text-gray-800 dark   bg-gray-900 dark:text-white">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
                     <div className="flex flex-col">
@@ -68,7 +68,7 @@ const Details = () => {
             </div>
             <div className="max-w-4xl mx-auto p-6">
                 {/* Image and Title */}
-                <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="bg-white dark:bg-gray-900 dark:text-white shadow-lg rounded-lg overflow-hidden">
                     <img
                         src={session.photo}
                         alt={session.title}
@@ -76,14 +76,14 @@ const Details = () => {
                     />
                     <div className="p-6">
 
-                        <p className="text-gray-700">Description: {session.description}</p>
+                        <p className="text-gray-700 dark:text-white">Description: {session.description}</p>
                     </div>
                 </div>
 
                 {/* Session Details */}
-                <div className="bg-white shadow-lg rounded-lg p-6 mt-6">
+                <div className="bg-white dark:bg-gray-900 dark:text-white shadow-lg rounded-lg p-6 mt-6">
                     <h2 className="text-2xl font-semibold mb-4">Session Details</h2>
-                    <ul className="list-disc list-inside text-gray-700 space-y-2">
+                    <ul className="list-disc list-inside text-gray-700 dark:text-white space-y-2">
                         <li>
                             <strong>Start Date:</strong> {session.startdate}
                         </li>
@@ -116,14 +116,14 @@ const Details = () => {
                 <div className="flex justify-between items-center mt-6">
                     <button
                         className={`px-6 py-2 rounded ${isOngoing
-                            ? "bg-green-500 text-white"
-                            : "bg-red-500 text-white"
+                            ? "bg-green-500 dark:bg-green-950 text-white"
+                            : "bg-red-500 dark:bg-red-950 text-white"
                             }`}
                     >
                         {isOngoing ? "Ongoing" : "Closed"}
                     </button>
                     {
-                        user.role === 'Student' ? <button onClick={() => handelSubmit(session)} className="px-6 py-2 bg-color2 text-white rounded">Book Now</button> : <button className="px-6 py-2 bg-gray-400 cursor-not-allowed text-white rounded">Book Now</button>
+                        user.role === 'Student' ? <button onClick={() => handelSubmit(session)} className="px-6 py-2 bg-color2 dark:bg-blue-950 text-white rounded">Book Now</button> : <button className="px-6 py-2 bg-gray-400 cursor-not-allowed text-white rounded">Book Now</button>
                     }
 
 

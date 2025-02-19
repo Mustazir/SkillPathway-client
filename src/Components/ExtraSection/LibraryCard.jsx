@@ -78,11 +78,7 @@ const LibraryCard = () => {
                 })}
             </div>
             <div className='flex justify-center w-full mt-7'>
-                <Link to={'/allbooks'}>
-                    <button className='px-6 py-2 text-lg bg-blue-500 dark:bg-blue-900 text-white rounded'>
-                        View All
-                    </button>
-                </Link>
+                
             </div>
         </div>
     );

@@ -59,8 +59,8 @@ const StudentSession = () => {
         }
     }
     return (
-        <div className="p-6 bg-gray-900 space-y-4 w-full">
-            <div className="p-6 sm:p-12 bg-gray-50 text-gray-800">
+        <div className="p-6 bg-gray-900 dark:bg-gray-950 space-y-4 w-full">
+            <div className="p-6 sm:p-12 bg-gray-50 dark:bg-gray-900 dark:text-white text-gray-800">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
                     <div className="flex flex-col">
@@ -70,13 +70,13 @@ const StudentSession = () => {
                 </div>
 
             </div>
-            <div className="p-6 sm:p-12 bg-blue-950 text-gray-800">
+            <div className="p-6 sm:p-12 bg-blue-950 dark:bg-gray-900 dark:text-white text-gray-800">
                 <div className="grid grid-cols-1 md:grid-cols-2  gap-5 ">
                     {
                         sessions.map(session =>
                             <div
                                 key={session._id}
-                                className="bg-white rounded-lg shadow-md overflow-hidden"
+                                className="bg-white dark:bg-gray-950 dark:text-white rounded-lg shadow-md overflow-hidden"
                             >
                                 <img
                                     src={session.photo}
@@ -85,12 +85,12 @@ const StudentSession = () => {
                                 />
                                 <div className="p-4">
                                     <h2 className="text-xl font-semibold mb-2">{session.title}</h2>
-                                    <p className="text-gray-600 mb-4">{session.description}</p>
+                                    <p className="text-gray-600 dark:text-white mb-4">{session.description}</p>
 
                                     <div className="divider"></div>
-                                    <div className="bg-white shadow-lg rounded-lg p-6 mt-6">
+                                    <div className="bg-white dark:bg-gray-950 dark:text-white shadow-lg rounded-lg p-6 mt-6">
                                         <h2 className="text-2xl font-semibold mb-4">Session Details</h2>
-                                        <ul className="list-disc list-inside text-gray-700 space-y-2">
+                                        <ul className="list-disc list-inside text-gray-700  dark:text-white space-y-2">
                                             <li>
                                                 <strong>Start Date:</strong> {session.startdate}
                                             </li>
@@ -107,7 +107,7 @@ const StudentSession = () => {
                                                 <strong>Duration:</strong> {session.duration} Month
                                             </li>
                                             <li>
-                                                <strong>Status:</strong> <span className="text-green-500">{session.status}</span>
+                                                <strong>Status:</strong> <span className="text-green-500 ">{session.status}</span>
                                             </li>
                                             <li>
                                                 <strong>Fee:</strong> ${session.fee}
@@ -118,7 +118,7 @@ const StudentSession = () => {
                                             </li>
                                         </ul>
                                         <div className='flex mt-5 justify-between '>
-                                         <button onClick={() => handelReview(session._id)} className="bg-color2 text-white px-3 py-1 rounded-sm">Review</button>
+                                         <button onClick={() => handelReview(session._id)} className="bg-color2 dark:bg-blue-950 text-white px-3 py-1 rounded-sm">Review</button>
                                         
                                     </div>
                                     </div>
