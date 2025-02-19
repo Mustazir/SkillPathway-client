@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Main/AuthProvider";
 import Swal from "sweetalert2";
 import { RxHamburgerMenu } from "react-icons/rx";
+import DarkModeToggle from "../../DarkMode/DarkModelToggle";
 
 const TuitorNav = () => {
   const { user, loading, logout } = useContext(AuthContext);
@@ -106,6 +107,9 @@ const TuitorNav = () => {
           </ul>
         </div>
         <ul className="menu px-3  w-full  text-white  p-0 [&_li>*]:rounded-none">
+        <li className="hover:bg-color1 hover:text-white">
+           <DarkModeToggle></DarkModeToggle>
+          </li>
           <li className="hover:bg-color1 hover:text-white active:bg-color1">
           <Link to="profile">Settings</Link>
           </li>
