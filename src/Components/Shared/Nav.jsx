@@ -1,52 +1,51 @@
 import { useContext, useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom"; // Added useLocation
 import logo from "../../assets/icons8-book-96.png";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../Main/AuthProvider";
 import Swal from "sweetalert2";
 import DarkModeToggle from "../DarkMode/DarkModelToggle";
+
 const Nav = () => {
   const { user, logout } = useContext(AuthContext);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // Get the current location
 
   const navLinks = (
     <>
       <Link to={"/"}>
-        <li className="p-2">Home</li>
+        <li className={`p-2 ${location.pathname === '/' ? 'border-b-2 border-blue-700' : ''}`}>Home</li>
       </Link>
       <Link to={"/allsessions"}>
-        <li className="p-2">Session</li>
+        <li className={`p-2 ${location.pathname === '/allsessions' ? 'border-b-2 border-blue-700' : ''}`}>Session</li>
       </Link>
       <Link to={"/tutors"}>
-        <li className="p-2">Our Tutors</li>
+        <li className={`p-2 ${location.pathname === '/tutors' ? 'border-b-2 border-blue-700' : ''}`}>Our Tutors</li>
       </Link>
       <Link to={"/aboutus"}>
-        <li className="p-2">About us</li>
+        <li className={`p-2 ${location.pathname === '/aboutus' ? 'border-b-2 border-blue-700' : ''}`}>About us</li>
       </Link>
-      <Link to={"/dashboard"}>
-        <li className="p-2">DashBoard</li>
-      </Link>
+      
     </>
   );
 
   const guestNavLinks = (
     <>
       <Link to={"/"}>
-        <li className="p-2">Home</li>
+        <li className={`p-2 ${location.pathname === '/' ? 'border-b-2 border-blue-700' : ''}`}>Home</li>
       </Link>
       <Link to={"/allsessions"}>
-        <li className="p-2">Session</li>
+        <li className={`p-2 ${location.pathname === '/allsessions' ? 'border-b-2 border-blue-700' : ''}`}>Session</li>
       </Link>
       <Link to={"/tutors"}>
-        <li className="p-2">Our Tutors</li>
+        <li className={`p-2 ${location.pathname === '/tutors' ? 'border-b-2 border-blue-700' : ''}`}>Our Tutors</li>
       </Link>
-      <Link to={"aboutus"}>
-        <li className="p-2">About us</li>
+      <Link to={"/aboutus"}>
+        <li className={`p-2 ${location.pathname === '/aboutus' ? 'border-b-2 border-blue-700' : ''}`}>About us</li>
       </Link>
     </>
   );
 
   // scroll
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -87,7 +86,7 @@ const Nav = () => {
         console.log(error);
       });
   };
-  // console.log(user)
+
   return (
     <div
       className={`text-white max-w-full  navbar justify-between px-3 md:px-6 fixed md:z-10 transition-all duration-300 ease-in-out dark:bg-d-color1
@@ -113,7 +112,7 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content dark:text-white  dark:bg-gray-800 bg-primary rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content dark:text-white dark:bg-gray-800 bg-primary rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {navLinks}
             <DarkModeToggle></DarkModeToggle>
@@ -135,7 +134,10 @@ const Nav = () => {
       <div className="">
         {user ? (
           <div className="flex items-center gap-4">
-            <button className=" text-lg">About us</button>
+            
+            <Link to={"/profile"} className=" text-lg">
+              Profile
+            </Link>
             <Link to={"/dashboard"} className=" text-lg">
               DashBoard
             </Link>

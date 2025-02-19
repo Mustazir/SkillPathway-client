@@ -54,7 +54,7 @@ export default function Announcements() {
 
   return (
     <section className="py-16 px-4 md:px-8 lg:px-48 text-white dark:bg-gray-950 dark:text-white border-b-2 border-orange-300">
-      <h2 className="text-4xl font-bold text-center mb-12 text-color1 dark:text-d-color1">
+      <h2 className="text-4xl font-bold text-center mb-12 text-color1 dark:text-white">
         Announcements
       </h2>
       <div className="space-y-6">

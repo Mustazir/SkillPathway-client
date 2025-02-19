@@ -53,7 +53,7 @@ const AllUSer = () => {
     }
     return (
         <div className="p-6 bg-gray-900 space-y-4 w-full">
-            <div className="p-6 sm:p-12 bg-gray-50 text-black">
+            <div className="p-6 sm:p-12 bg-gray-50 dark:bg-gray-950 dark:text-white text-black">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
                     <div className="flex flex-col">
@@ -63,9 +63,9 @@ const AllUSer = () => {
                 </div>
 
             </div>
-            <div className="p-6 sm:p-12 bg-blue-950 min-h-screen ">
+            <div className="p-6 sm:p-12 bg-blue-950 min-h-screen dark:bg-gray-950 dark:text-white">
 
-                <div className="container p-2 mx-auto sm:p-4 text-gray-800">
+                <div className="container p-2 mx-auto sm:p-4 text-gray-800 pr">
                     <h2 className="mb-4 text-2xl font-semibold leading-tight text-white">Total : {users.length} users</h2>
                     <div className="overflow-x-auto">
                         <table className="min-w-full text-xs">
@@ -77,7 +77,7 @@ const AllUSer = () => {
                                 <col />
                                 <col className="w-24" />
                             </colgroup>
-                            <thead className="bg-gray-300">
+                            <thead className="bg-gray-300 dark:bg-gray-900 dark:text-white">
                                 <tr className="text-left">
                                     <th className="p-3">Id #</th>
                                     <th className="p-3">Email</th>
@@ -89,7 +89,7 @@ const AllUSer = () => {
                             <tbody>
                                 {users.map((user) =>
 
-                                    <tr key={user._id} className="border-b hover:bg-color1 hover:text-white border-opacity-20 duration-150 border-gray-300 bg-gray-50">
+                                    <tr key={user._id} className="border-b hover:bg-color1 dark:bg-gray-800 dark:text-white hover:text-white border-opacity-20 duration-150 border-gray-300 bg-gray-50">
                                         <td className="p-3">
                                             <p>{user._id}</p>
                                         </td>
@@ -102,7 +102,7 @@ const AllUSer = () => {
                                         </td>
 
                                         <td className="p-3 text-right">
-                                            <button onClick={() => handelMakeAdmin(user._id)} className="px-3 py-1 font-semibold rounded-md bg-color2 hover:bg-white hover:text-color1 duration-150 text-gray-50">
+                                            <button onClick={() => handelMakeAdmin(user._id)} className="px-3 py-1 font-semibold rounded-md bg-color2 dark:bg-blue-950 hover:bg-white hover:text-color1 duration-150 text-gray-50">
                                                 Make Admin
                                             </button>
                                         </td>

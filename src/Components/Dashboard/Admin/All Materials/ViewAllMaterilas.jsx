@@ -45,7 +45,7 @@ const ViewAllMaterilas = () => {
     }
     return (
         <div className="p-6 bg-gray-900 space-y-4 w-full">
-            <div className="p-6 sm:p-12 bg-gray-50 text-gray-800 w-full">
+            <div className="p-6 sm:p-12 bg-gray-50 dark:bg-gray-950 dark:text-white text-gray-800 w-full">
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 
                     <div className="flex flex-col">
@@ -55,18 +55,18 @@ const ViewAllMaterilas = () => {
                 </div>
 
             </div>
-            <div className="p-6 sm:p-12 bg-blue-950  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 sm:p-12 bg-blue-950 dark:bg-gray-950 dark:text-white  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {materials.map((course) => (
                     <div
                         key={course._id}
-                        className="bg-white rounded-lg shadow-md overflow-hidden"
+                        className="bg-white dark:bg-gray-900 flex flex-col dark:text-white rounded-lg shadow-md overflow-hidden"
                     >
                         <img
                             src={course.photo}
                             alt={course.title}
                             className="w-full h-48 object-cover"
                         />
-                        <div className="p-4">
+                        <div className="p-4 flex flex-col flex-grow">
                             <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
                             <p className="text-gray-600 mb-4">{course.description}</p>
                             <p className="text-gray-700 font-medium mb-2">

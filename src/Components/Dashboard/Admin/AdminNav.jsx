@@ -37,8 +37,8 @@ const AdminNav = () => {
       });
   };
   return (
-    <div className="flex flex-col">
-      <div className="z-20 relative flex justify-between w-full items-center py-2 px-2 md:hidden">
+    <div className="flex flex-col dark:bg-gray-950 dark:text-white">
+      <div className="z-20 relative flex justify-between w-full items-center py-2 px-2 md:hidden dark:bg-gray-950 dark:text-white">
         <Link to={"/"}>
           <h1 className="font-bold  text-xl md:text-3xl">SkillPathway</h1>
         </Link>
@@ -61,7 +61,7 @@ const AdminNav = () => {
         </div>
       )}
 
-      <div className="h-screen sticky top-0 bg-color2 text-white hidden md:flex flex-col justify-between py-5 ">
+      <div className="h-screen sticky top-0 bg-color2 text-white hidden md:flex flex-col justify-between py-5 dark:bg-gray-950 dark:text-white">
         <div className="flex flex-col px-3 items-center">
           <div className="flex md:gap-4 py-5 items-center">
             <img src={logo} className="w-7 md:w-12 " alt="" />

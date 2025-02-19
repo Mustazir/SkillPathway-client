@@ -1,54 +1,260 @@
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function Reviews() {
-  const reviews = [
-    {
-      id: 1,
-      name: "Sarah Ahmed",
-      comment: "This platform helped me improve my skills and find amazing study sessions!",
-    },
-    {
-      id: 2,
-      name: "John Doe",
-      comment: "Great tutors and easy-to-use interface. Highly recommended for learners!",
-    },
-    {
-      id: 3,
-      name: "Emily Watson",
-      comment: "I love the interactive sessions and the variety of study materials available.",
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [reviews.length]);
+const ReviewsCard = () => {
+ 
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 dark:bg-gray-950 dark:text-white ">
-      <h2 className="text-4xl font-bold text-center mb-12 text-white dark:text-white">
-        User Reviews
-      </h2>
-      <div className="relative max-w-3xl mx-auto overflow-hidden">
-        {reviews.map((review, index) => (
-          <div
-            key={review.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div className="p-8 bg-color2 dark:bg-d-color2 rounded-2xl shadow-lg text-center">
-              <p className="text-xl mb-4">"{review.comment}"</p>
-              <h4 className="text-lg font-semibold">- {review.name}</h4>
+    <div className="py-10 dark:bg-gray-950 dark:text-white ">
+     <div className="flex justify-center gap-5">
+     <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-color1 text-white dark:bg-gray-900 w-full dark:text-white">
+        <div className="flex flex-col w-full">
+          <h2 className="text-3xl font-semibold text-center">
+            Students Reviews
+          </h2>
+
+          <div className="flex flex-wrap items-center mt-2 mb-1 space-x-2">
+            <div className="flex">
+              <button
+                type="button"
+                title="Rate 1 stars"
+                aria-label="Rate 1 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-yellow-700"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 2 stars"
+                aria-label="Rate 2 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-yellow-700"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 3 stars"
+                aria-label="Rate 3 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-yellow-700"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 4 stars"
+                aria-label="Rate 4 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-gray-400"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 000-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 5 stars"
+                aria-label="Rate 5 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-gray-400"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+            </div>
+            <span className="dark:text-gray-600">4 out of 5</span>
+          </div>
+
+          <p className="text-sm dark:text-gray-600">861 global ratings</p>
+
+          <div className="flex flex-col mt-4">
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">5 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-5/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">83%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">4 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-4/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">67%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">3 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-3/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">50%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">2 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-2/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">33%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">1 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-1/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">17%</span>
             </div>
           </div>
-        ))}
+        </div>
       </div>
-    </section>
+      <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl w-full lg:p-12 bg-color1 text-white dark:bg-gray-900 w-full dark:text-white">
+        <div className="flex flex-col w-full">
+          <h2 className="text-3xl font-semibold text-center">
+            Teachers Reviews
+          </h2>
+
+          <div className="flex flex-wrap items-center mt-2 mb-1 space-x-2">
+            <div className="flex">
+              <button
+                type="button"
+                title="Rate 1 stars"
+                aria-label="Rate 1 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-yellow-700"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 2 stars"
+                aria-label="Rate 2 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-yellow-700"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 3 stars"
+                aria-label="Rate 3 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-yellow-700"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 4 stars"
+                aria-label="Rate 4 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-gray-400"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 000-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                title="Rate 5 stars"
+                aria-label="Rate 5 stars"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-6 h-6 dark:text-gray-400"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              </button>
+            </div>
+            <span className="dark:text-gray-600">3 out of 5</span>
+          </div>
+
+          <p className="text-sm dark:text-gray-600">861 global ratings</p>
+
+          <div className="flex flex-col mt-4">
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">5 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-5/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">90%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">4 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-4/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">67%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">3 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-3/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">50%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">2 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-2/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">33%</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="flex-shrink-0 w-12 text-sm">1 star</span>
+              <div className="flex-1 h-4 overflow-hidden rounded-sm dark:bg-gray-300">
+                <div className="dark:bg-orange-500 h-4 w-1/6"></div>
+              </div>
+              <span className="flex-shrink-0 w-12 text-sm text-right">17%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
   );
-}
+};
+
+export default ReviewsCard;

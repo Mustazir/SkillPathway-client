@@ -66,8 +66,8 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="mx-auto justify-center items-center flex dark:bg-gray-950 pt-28 pb-28">
-      <div className="max-w-md mx-auto items-center justify-center p-8 space-y-6 bg-gray-50 dark:bg-gray-900 dark:text-white rounded-xl shadow-md">
+    <div className="mx-auto justify-center items-center flex dark:bg-gray-900 pt-28 pb-28">
+      <div className="max-w-md mx-auto items-center justify-center p-8 space-y-6 bg-gray-50 dark:bg-gray-950 dark:text-white rounded-xl shadow-md">
         <h1 className="text-3xl font-bold text-center">Update Profile</h1>
 
         {/* Current Profile Info */}

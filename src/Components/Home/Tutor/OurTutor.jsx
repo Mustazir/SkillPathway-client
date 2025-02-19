@@ -143,7 +143,7 @@ const tutors = [
   
   const OurTutors = () => {
     return (
-      <div className="bg-color1 dark:dark:bg-gray-950 dark:text-white text-white p-8">
+      <div className="bg-color1 dark:dark:bg-gray-950 dark:text-white text-white p-8 md:px-24">
         <h2 className="text-4xl font-bold text-white dark:dark:bg-gray-950 dark:text-white mb-8 text-center">Our Tutors</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {tutors.map((tutor, index) => (

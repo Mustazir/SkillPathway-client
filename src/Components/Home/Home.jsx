@@ -1,5 +1,7 @@
 
 import Announcements from '../ExtraSection/Announcements';
+import LibraryCard from '../ExtraSection/LibraryCard';
+import OurReviews from '../ExtraSection/Review';
 import Reviews from '../ExtraSection/Review';
 import SuccessStories from '../ExtraSection/SuccessStories';
 import ProfileUpdate from '../Shared/ProfileUpdate';
@@ -21,8 +23,9 @@ const Home = () => {
             <Others></Others>
             <Announcements></Announcements>
             <SuccessStories></SuccessStories>
-            <OtherSecons></OtherSecons>            
-            <Reviews></Reviews>
+            <OtherSecons></OtherSecons> 
+            <LibraryCard></LibraryCard>           
+            <OurReviews></OurReviews>
             
         </div>
     );

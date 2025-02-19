@@ -121,25 +121,25 @@ const Register = () => {
     }
 
     return (
-        <div className="hero bg-gray-200 md:py-16">
+        <div className="hero bg-gray-200 md:py-16 dark:bg-gray-950 dark:text-white">
             <div className="hero-content p-0 flex-col justify-stretch gap-20 md:flex-row">
                 <div className="text-center md:w-1/2 lg:text-left">
                     <img src={register} alt="Register" className="md:w-[44vw]" />
                 </div>
                 <div className="card bg-base-100 md:w-1/2 w-full max-w-sm shrink-0">
-                    <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
+                    <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
                         <h1 className="text-4xl text-color1 font-bold text-center">Register</h1>
                         <form onSubmit={handleFormSubmit} className="space-y-4">
                             <div className="space-y-1 text-sm">
-                                <label htmlFor="username" className="block text-gray-600">Username</label>
+                                <label htmlFor="username" className="block text-gray-600 dark:text-white">Username</label>
                                 <input type="text" name="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border-gray-300 border-2 bg-gray-50 text-gray-800" />
                             </div>
                             <div className="space-y-1 text-sm">
-                                <label htmlFor="email" className="block text-gray-600">Email</label>
+                                <label htmlFor="email" className="block text-gray-600 dark:text-white">Email</label>
                                 <input type="email" name="email" placeholder="Email" className="w-full border-2 px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800" />
                             </div>
                             <div className="space-y-1 text-sm">
-                                <label htmlFor="role" className="block text-gray-600">Choose Role</label>
+                                <label htmlFor="role" className="block text-gray-600 dark:text-white">Choose Role</label>
                                 <select name="role" defaultValue="Student" className="select select-bordered w-full border-2 px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800">
                                     <option className="text-gray-800">Student</option>
                                     <option className="text-gray-800">Tuitor</option>
@@ -147,12 +147,12 @@ const Register = () => {
                                 </select>
                             </div>
                             <div className="space-y-1 text-sm">
-                                <label htmlFor="password" className="block text-gray-600">Password</label>
+                                <label htmlFor="password" className="block text-gray-600 dark:text-white">Password</label>
                                 <input type="password" name="password" placeholder="Password" className="w-full border-2 px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800" />
                             </div>
                             <div className="space-y-1 text-sm">
-                                <label htmlFor="photo" className="block text-gray-600">Photo</label>
-                                <input type="file" name="photo" className="file-input file-input-[#2d3c44] file-input-bordered w-full max-w-xs" />
+                                <label htmlFor="photo" className="block text-gray-600 dark:text-white">Photo</label>
+                                <input type="file" name="photo" className="dark:text-black file-input file-input-[#2d3c44] file-input-bordered w-full max-w-xs" />
                             </div>
                             {
                                 flag ?
@@ -168,7 +168,7 @@ const Register = () => {
                         </form>
                         <div className="flex items-center pt-4 space-x-1">
                             <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
-                            <p className="px-3 text-sm text-gray-600">Login with social accounts</p>
+                            <p className="px-3 text-sm text-gray-600 dark:text-white">Login with social accounts</p>
                             <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
                         </div>
                         <div className="flex justify-center space-x-4">
@@ -184,8 +184,8 @@ const Register = () => {
                             </button>
 
                         </div>
-                        <p className="text-xs text-center sm:px-6 text-gray-600">
-                            Already have an account? <Link to="/login" className="underline text-gray-800">Sign In</Link>
+                        <p className="text-xs text-center sm:px-6 text-gray-600 dark:text-white">
+                            Already have an account? <Link to="/login" className="underline text-gray-800 dark:text-white">Sign In</Link>
                         </p>
                     </div>
                 </div>
