@@ -107,7 +107,7 @@ const TuitorNav = () => {
         </div>
         <ul className="menu px-3  w-full  text-white  p-0 [&_li>*]:rounded-none">
           <li className="hover:bg-color1 hover:text-white active:bg-color1">
-            <Link>Settings</Link>
+          <Link to="profile">Settings</Link>
           </li>
           <div className="divider"></div>
           {loading ? (

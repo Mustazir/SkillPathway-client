@@ -23,6 +23,9 @@ import StudentStudyMaterilas from "../Dashboard/Student/StudyMaterials/StudentSt
 import Details from "../Home/Details";
 import UserPrivate from "../Private/UserPrivate";
 import AllSessions from "../Home/AllSessions";
+import OurTutors from "../Home/Tutor/OurTutor";
+
+import UpdateProfile from './../Shared/ProfileUpdate';
 
 
 const Routes = createBrowserRouter([
@@ -50,8 +53,16 @@ const Routes = createBrowserRouter([
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+          path:'/tutors',
+          element:<OurTutors></OurTutors>
         }
         ,
+        {
+          path:'profile',
+          element:<UpdateProfile></UpdateProfile>
+        },
         // {
         //     path:'/session/payment/:id',
         //     element:<Payment></Payment>
@@ -65,7 +76,9 @@ const Routes = createBrowserRouter([
         {
           path:'create_session',
           element:<CreateSession></CreateSession> 
-        },{
+        },
+        
+        {
           path:'tuitor_sessions',
           element:<TuitorSessions></TuitorSessions>
         },{
@@ -102,6 +115,10 @@ const Routes = createBrowserRouter([
         ,{
           path:'student_materials',
           element:<StudentStudyMaterilas></StudentStudyMaterilas>
+        }
+        ,{
+          path:'setting',
+          element:<UpdateProfile></UpdateProfile>
         }
       ]
     }

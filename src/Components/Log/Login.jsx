@@ -94,13 +94,13 @@ const Login = () => {
             })
     }
     return (
-        <div className="hero bg-gray-200 py-32">
+        <div className="hero bg-gray-200 py-32 dark:bg-gray-950">
             <div className="hero-content  flex-col lg:flex-row-reverse">
                 <div className="text-center w-1/2 lg:text-left ">
                     <img src={login} alt="" />
                 </div>
                 <div className="card bg-base-100 w-1/2   max-w-sm shrink-0 ">
-                    <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
+                    <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
                         <h1 className="text-4xl text-color1 font-bold text-center">Login</h1>
                         <form onSubmit={handelSubmit} className="space-y-6">
                             <div className="space-y-1 text-sm">
@@ -143,7 +143,7 @@ const Login = () => {
 
                         </div>
                         <p className="text-xs text-center sm:px-6 text-gray-600">Dont have an account?
-                            <Link to={'/register'} className="underline text-gray-800">Sign up</Link>
+                            <Link to={'/register'} className="underline text-gray-800 dark:text-white">Sign up</Link>
                         </p>
                     </div>
                 </div>

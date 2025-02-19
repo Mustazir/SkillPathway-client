@@ -39,7 +39,7 @@ const AdminNav = () => {
   return (
     <div className="flex flex-col">
       <div className="z-20 relative flex justify-between w-full items-center py-2 px-2 md:hidden">
-        <Link to={'/'}>
+        <Link to={"/"}>
           <h1 className="font-bold  text-xl md:text-3xl">SkillPathway</h1>
         </Link>
         <RxHamburgerMenu onClick={() => setShow(!show)} />
@@ -103,8 +103,8 @@ const AdminNav = () => {
           </ul>
         </div>
         <ul className="menu px-3  w-full  text-white  p-0 [&_li>*]:rounded-none">
-          <li className="hover:bg-color1 hover:text-white active:bg-color1">
-            <Link>Settings</Link>
+          <li className="hover:bg-color1 hover:text-white">
+            <Link to="setting">Settings</Link>
           </li>
           <div className="divider"></div>
           {loading ? (
