@@ -19,7 +19,7 @@ const Nav = () => {
       <Link to={"/tutors"}>
         <li className="p-2">Our Tutors</li>
       </Link>
-      <Link to={"/"}>
+      <Link to={"/aboutus"}>
         <li className="p-2">About us</li>
       </Link>
       <Link to={"/dashboard"}>
@@ -30,13 +30,16 @@ const Nav = () => {
 
   const guestNavLinks = (
     <>
+      <Link to={"/"}>
+        <li className="p-2">Home</li>
+      </Link>
       <Link to={"/allsessions"}>
         <li className="p-2">Session</li>
       </Link>
       <Link to={"/tutors"}>
         <li className="p-2">Our Tutors</li>
       </Link>
-      <Link to={"/"}>
+      <Link to={"aboutus"}>
         <li className="p-2">About us</li>
       </Link>
     </>
@@ -151,9 +154,9 @@ const Nav = () => {
                 className="menu menu-sm dropdown-content text-c bg-color2 dark:bg-gray-900 border border-orange-300  z-[1] mt-3 w-52  shadow"
               >
                 <li className="pt-1 hover:bg-gray-200 p-1">
-                <Link to="profile">Profile</Link>
+                  <Link to="profile">Profile</Link>
                 </li>
-                
+
                 <li
                   className="pt-1 hover:bg-gray-200 p-1"
                   onClick={handleLogOut}

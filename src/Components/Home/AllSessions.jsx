@@ -51,30 +51,30 @@ const AllSessions = () => {
 
     console.log(sessions)
         return (
-        <div>
-            <div className="flex justify-end mb-4">
+        <div className='dark:bg-gray-950 py-24'>
+            <div className="flex justify-end mb-4 mr-24">
                 <button
                     onClick={() => handleSortChange('price')}
-                    className="px-4 py-2 text-sm bg-gray-500 text-white rounded mr-2"
+                    className="px-4 py-2 text-sm bg-d-color1 bg-color1 text-white rounded mr-2"
                 >
                     Sort by Price
                 </button>
                 <button
                     onClick={() => handleSortChange('recent')}
-                    className="px-4 py-2 text-sm bg-gray-500 text-white rounded"
+                    className="px-4 py-2 text-sm bg-d-color1 bg-color1 text-white rounded"
                 >
                     Sort by Recent
                 </button>
             </div>
 
-            <div className="md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="md:px-[10vw] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
                 {sortedSessions.map((session) => {
                     const isOngoing = new Date(session.enddate) >= today;
 
                     return (
                         <div
                             key={session._id}
-                            className="bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between"
+                            className="bg-white dark:bg-gray-900 dark:text-white shadow-lg rounded-lg p-4 flex flex-col justify-between"
                         >
                             <img
                                 src={session.photo}
@@ -85,7 +85,7 @@ const AllSessions = () => {
                                 <h3 className="text-xl font-semibold mb-2">
                                     {session.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">
+                                <p className="text-sm text-gray-600 dark:text-white">
                                     {session.description?.slice(0, 100)}...
                                 </p>
                             </div>
@@ -93,13 +93,13 @@ const AllSessions = () => {
                             <div className="flex justify-between items-center mt-4">
                                 <button
                                     className={`px-4 py-2 text-sm rounded ${isOngoing
-                                        ? "bg-green-500 text-white"
-                                        : "bg-red-500 text-white"
+                                        ? "bg-green-500 dark:bg-green-900 text-white"
+                                        : "bg-red-500 dark:bg-red-900 text-white"
                                         }`}
                                 >
                                     {isOngoing ? "Ongoing" : "Closed"}
                                 </button>
-                                <Link to={`/session/${session._id}`} className="px-4 py-2 text-sm bg-blue-500 text-white rounded">
+                                <Link to={`/session/${session._id}`} className="px-4 py-2 text-sm bg-blue-500 dark:bg-blue-950 text-white rounded">
                                     Read More
                                 </Link>
                             </div>

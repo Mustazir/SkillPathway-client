@@ -26,6 +26,7 @@ import AllSessions from "../Home/AllSessions";
 import OurTutors from "../Home/Tutor/OurTutor";
 
 import UpdateProfile from './../Shared/ProfileUpdate';
+import AboutUs from "../ExtraSection/AboutUs";
 
 
 const Routes = createBrowserRouter([
@@ -62,6 +63,10 @@ const Routes = createBrowserRouter([
         {
           path:'profile',
           element:<UpdateProfile></UpdateProfile>
+        },
+        {
+          path:'aboutus',
+          element:<AboutUs></AboutUs>
         },
         // {
         //     path:'/session/payment/:id',
